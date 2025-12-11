@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Assign Album to Band</h2>
+<form method="post">
+    <label>Band:</label>
+    <select name="bandid" required>
+        <option value="">-- select Band --</option>
+        {% for band in bands %}
+        <option value="{{ band.BandID }}">{{ band.BandName }}</option>
+        {% endfor %}
+    </select><br>
+    <label>Album:</label>
+    <select name="albumid" required>
+        <option value="">-- select Album --</option>
+        {% for album in albums %}
+        <option value="{{ album.AlbumID }}">{{ album.AlbumTitle }}</option>
+        {% endfor %}
+    </select><br>
+    <button type="submit">Save Connection</button>
+</form>
+{% endblock %}

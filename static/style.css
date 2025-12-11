@@ -1,4 +1,112 @@
-body { font-family: Arial, sans-serif; margin: 20px; }
-header { margin-bottom: 20px; }
-label { width: 120px; display: inline-block; }
-button { margin-top: 10px; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #b30000 0%, #7b7b7b 55%, #2b2b2b 100%);
+  color: #f4f4f4;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: url("https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyZTM0bHU4bm4wZWg0ODVuNmEycnh3ZXYwcWowbDVpajJocnhuc2YyNiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/itErXQkePa3Dk59PkX/giphy.gif")
+              center 120px / 60% no-repeat;
+
+  opacity: 0.45;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(
+    90deg,
+    #cc0000,
+    #565656,
+    #181717
+  );
+  border-bottom: 3px solid #cc3b3b;
+  box-shadow: 0 0 15px #1a1a1a;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 0 0 6px #ff3333;
+  margin-bottom: 15px;
+}
+
+nav a {
+  color: #ffd6d6;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 8px;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 6px #ff4d4d;
+}
+
+nav {
+  font-size: 1.1rem;
+}
+
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(40, 40, 40, 0.55); /* soft charcoal */
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 18px rgba(255, 45, 45, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+.success {
+  color: #00e68a;
+  border-left: 4px solid #00e68a;
+  background: rgba(0, 230, 138, 0.12);
+  padding: 10px 16px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.error {
+  color: #ff4d4d;
+  border-left: 4px solid #ff4d4d;
+  background: rgba(255, 0, 0, 0.12);
+  padding: 10px 16px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px;
+  background: #393939;
+  color: #fff;
+  border: 1px solid #7a7a7a;
+  border-radius: 6px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border
